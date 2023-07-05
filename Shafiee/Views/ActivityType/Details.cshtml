@@ -1,0 +1,25 @@
+﻿@model ActivityType
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Code</th>
+            <th scope="col">IsActive</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Code</td>
+            <td>@Model.IsActive</td>
+            <td><a class="btn btn-danger" asp-controller="ActivityType" asp-action="Delete" asp-route-id="@Model.Id">Delete</a></td>
+            <td><a class="btn btn-danger" asp-controller="ActivityType" asp-action="Update" formmethod="Get" asp-route-id="@Model.Id">Update</a></td>
+            <td><a class="btn btn-danger" asp-controller="ActivityType" asp-action="Index">Back</a></td>
+        </tr>
+        
+    </tbody>
+</table>
